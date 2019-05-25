@@ -1,0 +1,8 @@
+[package]
+name = "gilded-rose"
+version = "0.1.0"
+authors = ["MaFarnSch <39802013+MaFarnSch@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+num = "0.2.0"

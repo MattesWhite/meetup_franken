@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "gilded-rose",
+  "prime-time",
+  "slip",
+]
