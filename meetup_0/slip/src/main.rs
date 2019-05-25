@@ -3,9 +3,15 @@ use nom::*;
 const START_END: u8 = 0xC0;
 const ESCAPE: u8 = 0xDB;
 
+/// Encodes slice of bytes according to the SLIP-protocol.
 fn slip_encode(msg: &[u8]) -> Vec<u8> {
-    let mut encoded = Vec::with_capacity(msg.len() + 2); // preserve minimal length
+    // preserve minimal length
+    let mut encoded = Vec::with_capacity(msg.len() + 2); 
+
+    // First byte is 0xC0
     encoded.push(START_END);
+
+    // Go through bytes and look for values that must be escaped
     msg.iter().for_each(|byte| match byte {
         &START_END => {
             encoded.push(ESCAPE);
@@ -19,6 +25,7 @@ fn slip_encode(msg: &[u8]) -> Vec<u8> {
             encoded.push(*b);
         }
     });
+    // Last byte is 0xC0
     encoded.push(START_END);
 
     encoded
