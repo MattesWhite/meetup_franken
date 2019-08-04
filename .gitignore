@@ -1,0 +1,10 @@
+Cargo.lock
+target/
+
+meetup_1/demo/Cargo.lock
+meetup_1/demo/target/
+
+meetup_1/guess/Cargo.lock
+meetup_1/guess/target/
+
+meetup_1/error_handling/~$error_handling.pptx
