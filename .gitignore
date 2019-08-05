@@ -7,4 +7,7 @@ meetup_1/demo/target/
 meetup_1/guess/Cargo.lock
 meetup_1/guess/target/
 
+meetup_1/exercise/Cargo.lock
+meetup_1/exercise/target
+
 meetup_1/error_handling/~$error_handling.pptx
